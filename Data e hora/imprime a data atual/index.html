@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Atualizada</title>
+</head>
+<body>
+    <h1 id="data-atual"></h1>
+
+    <script>
+        function atualizarData() {
+            const agora = new Date();
+            const dia = agora.getDate();
+            const mes = agora.getMonth() + 1; 
+            const ano = agora.getFullYear();
+
+            const formatoData = `${dia < 10 ? '0' : ''}${dia}/${mes < 10 ? '0' : ''}${mes}/${ano}`;
+
+            document.getElementById('data-atual').innerText = formatoData;
+        }
+
+    
+        atualizarData();
+
+   
+        setInterval(() => {
+            const agora = new Date();
+            if (agora.getHours() === 0 && agora.getMinutes() === 0 && agora.getSeconds() === 0) {
+                atualizarData();
+            }
+        }, 1000); 
+    </script>
+</body>
+</html>

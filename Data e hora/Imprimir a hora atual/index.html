@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Atualizado</title>
+</head>
+<body>
+    <h1 id="hora-atual"></h1>
+
+    <script>
+        function atualizarHora() {
+            const agora = new Date();
+            const horas = agora.getHours();
+            const minutos = agora.getMinutes();
+            const segundos = agora.getSeconds();
+
+            const formatoHora = `${horas}:${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
+
+            document.getElementById('hora-atual').innerText = formatoHora;
+        }
+
+        // Chama a função inicialmente
+        atualizarHora();
+
+        // Atualiza a hora a cada minuto (60 segundos)
+        setInterval(atualizarHora, 60000);
+    </script>
+</body>
+</html>

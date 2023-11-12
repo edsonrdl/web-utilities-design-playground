@@ -1,7 +1,8 @@
 body{
     position: relative;
 }
-.container{
+/**/
+.progress{
     display: flex;
     width: 420px;
     padding: 50px 0;
