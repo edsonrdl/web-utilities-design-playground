@@ -3,9 +3,9 @@
     --color-secundary:#652218;
     --color-background:#181a1e;
     --color-white:#ffffff;
-    --color-dark:#686868;
-    --color-light: rgba(239, 239, 239, 0.18);
-    --color-info-dark: #8a8a8a;
+    --color-dark:#8d8d8d;
+    --color-light: rgba(129, 129, 129, 0.18);
+    --color-info-dark: #333333;
     --color-info-light: #dce1eb;
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
@@ -44,17 +44,17 @@ body{
     align-items: center; 
     background-color:var(--color-background); 
 }
-.data{
+.clock{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width:auto;
+    height:auto;
     background: var(--color-dark);
-    border-radius: 25px;
+    border:solid 2px var(--color-info-light);
     box-shadow: var(--box-shadow);
 }
-#data-actual{
-    font-size: 3rem;
-    color: var(--color-white);
+#hora{
+    font-size:4rem;
+    color: var(--color-info-dark);
 }

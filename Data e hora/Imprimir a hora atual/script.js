@@ -6,11 +6,9 @@ function updateDate() {
 
     const formatoHora = `${horas}:${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
 
-    document.getElementById('hora-atual').innerText = formatoHora;
+    document.getElementById('hora').innerText = formatoHora;
 }
 
-// Chama a função inicialmente
 updateDate();
 
-// Atualiza a hora a cada minuto (60 segundos)
-setInterval(atualizarHora, 60000);
+setInterval(updateDate, 1000);
