@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar por Data</title>
+</head>
+<body>
+    <input type="date" id="dateFilter" onchange="filterItems()">
+    
+    <ul id="itemList">
+        <li data-date="2023-08-01">Item 1 (2023-08-01)</li>
+        <li data-date="2023-08-02">Item 2 (2023-08-02)</li>
+        <li data-date="2023-08-03">Item 3 (2023-08-03)</li>
+        <!-- Adicione mais itens com diferentes datas -->
+    </ul>
+
+    <script>
+        function filterItems() {
+            const dateFilter = document.getElementById('dateFilter').value;
+
+            // Obtém todos os itens
+            const items = document.querySelectorAll('#itemList li');
+
+            // Itera sobre os itens e mostra ou esconde com base na data
+            items.forEach(item => {
+                const itemDate = item.getAttribute('data-date');
+
+                // Se a data do item for igual à data no filtro ou o filtro estiver vazio, mostra o item
+                if (itemDate === dateFilter || dateFilter === '') {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

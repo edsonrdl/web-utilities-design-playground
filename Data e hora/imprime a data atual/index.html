@@ -3,33 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Atualizada</title>
+    <link href="./style.css" rel="stylesheet">
+    <title>Data Atual</title>
 </head>
 <body>
-    <h1 id="data-atual"></h1>
-
-    <script>
-        function atualizarData() {
-            const agora = new Date();
-            const dia = agora.getDate();
-            const mes = agora.getMonth() + 1; 
-            const ano = agora.getFullYear();
-
-            const formatoData = `${dia < 10 ? '0' : ''}${dia}/${mes < 10 ? '0' : ''}${mes}/${ano}`;
-
-            document.getElementById('data-atual').innerText = formatoData;
-        }
-
-    
-        atualizarData();
-
-   
-        setInterval(() => {
-            const agora = new Date();
-            if (agora.getHours() === 0 && agora.getMinutes() === 0 && agora.getSeconds() === 0) {
-                atualizarData();
-            }
-        }, 1000); 
-    </script>
+    <h1 class="text">Exemplo para imprimir a data no front end html,css e javascript</h1>
+   <div class="data">
+    <h1 id="data-actual"></h1>
+   </div>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -6,25 +6,10 @@
     <title>Relógio Atualizado</title>
 </head>
 <body>
+    <h1></h1>
     <h1 id="hora-atual"></h1>
 
-    <script>
-        function atualizarHora() {
-            const agora = new Date();
-            const horas = agora.getHours();
-            const minutos = agora.getMinutes();
-            const segundos = agora.getSeconds();
-
-            const formatoHora = `${horas}:${minutos < 10 ? '0' : ''}${minutos}:${segundos < 10 ? '0' : ''}${segundos}`;
-
-            document.getElementById('hora-atual').innerText = formatoHora;
-        }
-
-        // Chama a função inicialmente
-        atualizarHora();
-
-        // Atualiza a hora a cada minuto (60 segundos)
-        setInterval(atualizarHora, 60000);
+    <script src="./script.js">
     </script>
 </body>
 </html>
