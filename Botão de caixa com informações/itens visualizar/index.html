@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="all-order-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>CLIENTE</th>
+                  <th>NÚMERO DO PEDIDO</th>
+                  <th>DATA/HORA</th>
+                  <th>STATUS</th>
+                  <th>ITEM</th>
+                </tr>
+              </thead>
+              <tbody id="tbody-orders-date-all">
+                <tr>
+                  <td>Cliente 1</td>
+                  <td>Pedido 001</td>
+                  <td>01/01/2023</td>
+                  <td>Em andamento</td>
+                  <td class="item-button" onclick="toggleItemBox(this)">Itens</td>
+                </tr>
+          
+              </tbody>
+            </table>
+          </div>
+          
+          <div id="itemBox" class="item-box">
+          
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+          
+            </ul>
+          </div>
+    </div>
+
+
+<script src="./script.js">
+</script>
+
+</body>
+</html>
