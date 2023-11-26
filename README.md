@@ -16,7 +16,7 @@ Meu objetivo é praticar códigos de front-end e tecnologias voltados ao desenvo
 
 
 ## Descrição
-O repositório é organizado por tópicos bem detalhados para entrar visualizar os códigos rodar o html utilizando o run code que é uma extensão da IDE vs Code para visualizar de forma simples como funciona tais códigos e funcionalidades do html ,css e javascript com o objetivo de aprendizado particular e de terceiros !
+O repositório é organizado por tópicos bem detalhados para entrar visualizar os códigos rodar o html utilizando o code runner e o live serve  que são extensões da IDE vs Code para visualizar de forma simples como funciona tais códigos e funcionalidades do html ,css e javascript com o objetivo de aprendizado particular e de terceiros !
 ## Alguns Exemplos 
 
 
