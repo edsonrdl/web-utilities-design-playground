@@ -26,4 +26,4 @@ function showIcon() {
     }, 2000); 
 }
 
-setInterval(showIcon, 3000); 
+setInterval(showIcon, 2000); 
