@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5dfec;
+}
+
+.container {
+    width: 360px;
+    margin: 20px auto;
+    padding: 20px;
+    background-image: url('./6240b66d5c50c8661eee78b439a7d33c.jpg');
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.received .content {
+    background-color: #dcf8c6;
+    padding: 10px;
+    border-radius: 15px 15px 0 15px;
+}
+
+.sent .content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 15px 15px 15px 0;
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #777;
+    align-self: flex-end;
+    margin-top: 5px;
+}
