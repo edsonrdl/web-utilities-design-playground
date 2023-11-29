@@ -1,8 +1,24 @@
 function getRandomIcon() {
   
     const imgsArray = [
-      ".icons/icons8-c-sharp-logo-50.png",
-      ".icons/icons8-java-50.png"
+      "./img/icon-.net-framework.png",
+      "./img/icon-angular.png",
+      "./img/icon-c-sharp-logo.png",
+      "./img/icon-css.png",
+      "./img/icon-docker.png",
+      "./img/icon-html-5.png",
+      "./img/icon-java.png",
+      "./img/icon-javascript.png",
+      "./img/icon-mongodb.png",
+      "./img/icon-mysql.png",
+      "./img/icon-node-js.png",
+      "./img/icon-postgres.png",
+      "./img/icon-postman.png",
+      "./img/icon-python.png",
+      "./img/icon-sass.png",
+      "./img/icon-spring-boot.png",
+      "./img/icon-sql-server.png",
+      "./img/icon-typescript.png"
     ];
   
   
