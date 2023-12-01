@@ -24,8 +24,6 @@ function getRandomIcon() {
 
   return imgsArray[Math.floor(Math.random() * imgsArray.length)];
 };
-
-
 function getRandomPositionDisplay() {
   const container = document.getElementById('container-exibi-icons');
   const widthContainer = container.clientWidth;
@@ -35,7 +33,7 @@ function getRandomPositionDisplay() {
   const x = Math.floor(Math.random() * width);
   const y = Math.floor(Math.random() * height);
   return { x, y };
-}
+};
 
 function showIcon() {
   const imgSrc = getRandomIcon();
@@ -52,26 +50,31 @@ function showIcon() {
 
   container.appendChild(imgElement);
 
+
   setTimeout(() => {
     imgElement.style.visibility = 'hidden';
-  }, 2000);
-}
+  }, 3000);
+};
 
 function activateDisplayIcons() {
-
-  intervalId = setInterval(showIcon, 3000);
-}
+  if (!intervalId) {
+    intervalId = setInterval(() => {
+      // Limpe o último timeout antes de iniciar um novo
+      clearTimeout(timeoutId);
+      showIcon();
+    }, 3000);
+  }
+};
 
 function deactivateDisplayIcons() {
-
   clearInterval(intervalId);
-  console.log("Função desativada");
+  intervalId = null;
+  console.log("Desativado");
 }
 
 function checkVisibility() {
   const mySectionDisplay = document.getElementById("container-exibi-icons");
   const boundingBox = mySectionDisplay.getBoundingClientRect();
-
 
   if (
     boundingBox.top >= 0 &&
@@ -79,10 +82,8 @@ function checkVisibility() {
     boundingBox.bottom <= window.innerHeight &&
     boundingBox.right <= window.innerWidth
   ) {
-
     activateDisplayIcons();
   } else {
-
     deactivateDisplayIcons();
   }
 }
@@ -90,6 +91,5 @@ function checkVisibility() {
 document.getElementById("container-exibi-icons").addEventListener("mouseover", checkVisibility);
 document.getElementById("container-exibi-icons").addEventListener("mouseout", deactivateDisplayIcons);
 window.addEventListener("scroll", checkVisibility);
-window.addEventListener("resize", checkVisibility);
 window.addEventListener("resize", checkVisibility);
 window.addEventListener("load", checkVisibility);
