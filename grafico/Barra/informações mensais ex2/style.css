@@ -1,0 +1,27 @@
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 400px;
+    margin: 20px;
+    gap: 2px;
+}
+
+.bar {
+    flex: 1;
+    cursor: pointer;
+    background-color: #3498db;
+    text-align: center;
+    transition: height 0.3s;
+}
+
+.bar span {
+    color: rgb(0, 0, 0);
+}

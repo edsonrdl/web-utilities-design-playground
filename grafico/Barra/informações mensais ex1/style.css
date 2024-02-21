@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bar {
+    width: 15%;
+    background-color: #3f51b5;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+
+.bar:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        flex-direction: column;
+    }
+
+    .bar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .bar:last-child {
+        margin-bottom: 0;
+    }
+}

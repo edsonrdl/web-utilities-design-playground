@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel de Portfólio</title>
+  <!-- Adicione os estilos do Swiper.css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    /* Seus estilos personalizados aqui */
+    .container-card-content {
+      /* Adicione seus estilos conforme necessário */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seu conteúdo do carrossel aqui -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Coloque vários desses elementos para criar mais slides -->
+      <div class="swiper-slide">
+        <!-- Seu conteúdo existente aqui -->
+      </div>
+    </div>
+    <!-- Adicione a navegação do carrossel -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Adicione o script do Swiper.js -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Inicialize o Swiper.js -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1, // Número de slides visíveis por vez
+      spaceBetween: 20, // Espaço entre os slides
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
